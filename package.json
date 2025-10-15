@@ -1,0 +1,18 @@
+{
+  "name": "ronnie-marketplace",
+  "version": "1.0.0",
+  "scripts": {
+    "dev:client": "cd nextjs-client && npm run dev",
+    "dev:server": "cd server && npm run dev", 
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "install:client": "cd nextjs-client && npm install",
+    "install:server": "cd server && npm install",
+    "install:all": "npm run install:server && npm run install:client"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+/* Remove these old directives: */
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
+
+:root {
+  /* Premium Color Palette */
+  --beige: #F5F3EE;
+  --warm-brown: #B26E41;
+  --muted-gold: #F7C873;
+  --deep-charcoal: #2A2A2A;
+  --soft-white: #FAF9F6;
+  
+  /* Enhanced spacing and shadows */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--soft-white);
+  color: var(--deep-charcoal);
+}
+
+/* Gradient backgrounds */
+.bg-premium-gradient {
+  background: linear-gradient(135deg, var(--warm-brown) 0%, var(--muted-gold) 100%);
+}
+
+.bg-card-gradient {
+  background: linear-gradient(135deg, var(--beige) 0%, var(--soft-white) 100%);
+}
+
+/* Smooth animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--beige);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-gold);
+  border-radius: 3px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+body {
+  color: var(--deep-charcoal);
+  background: var(--soft-white);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Custom utility classes for Ronnie's Store */
+.btn-primary {
+  background-color: var(--warm-brown);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #96582F; /* Darker warm-brown */
+}
+
+.btn-secondary {
+  background-color: #e5e7eb; /* gray-200 */
+  color: #1f2937; /* gray-800 */
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: #d1d5db; /* gray-300 */
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid #e5e7eb; /* gray-200 */
+  padding: 1.5rem;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 80rem; /* max-w-7xl */
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--muted-gold);
+  outline-offset: 2px;
+}
+
+/* Custom component classes */
+.btn-primary-modern {
+  background: linear-gradient(135deg, var(--warm-brown) 0%, var(--muted-gold) 100%);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(178, 110, 65, 0.3);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--warm-brown) 0%, var(--muted-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
