@@ -3,16 +3,27 @@
   "version": "1.0.0",
   "scripts": {
     "dev:client": "cd nextjs-client && npm run dev",
-    "dev:server": "cd server && npm run dev", 
+    "dev:server": "cd server && npm run dev",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "install:client": "cd nextjs-client && npm install",
     "install:server": "cd server && npm install",
     "install:all": "npm run install:server && npm run install:client"
   },
   "devDependencies": {
-    "concurrently": "^7.6.0"
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
+    "concurrently": "^7.6.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.0"
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.19"
   }
 }
